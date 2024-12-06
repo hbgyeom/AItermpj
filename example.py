@@ -1,7 +1,9 @@
-from datahandler import get_wav
+from datahandler import get_json, get_wav
 
-path = "아래 csv파일이 있는 경로/"
+path = "C:/Users/HBG/codes/project/dataset/D/label/"
 name = "label_list.csv"
+json_list = get_json(path, name, 940)
 wav_list = get_wav(path, name, 940)
 
+print(json_list)
 print(wav_list)
