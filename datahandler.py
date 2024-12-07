@@ -34,12 +34,12 @@ def json_to_wav(filter_list):
 
 def get_wav(file_path, file_name, threshold):
     playTime_list = get_playTimes(file_path, file_name)
-    filter_list = filter_playTime(playTime_list, 940)
+    filter_list = filter_playTime(playTime_list, threshold)
     wav_list = json_to_wav(filter_list)
     return wav_list
 
 
 def get_json(file_path, file_name, threshold):
     playTime_list = get_playTimes(file_path, file_name)
-    json_list = filter_playTime(playTime_list, 940)
+    json_list = filter_playTime(playTime_list, threshold)
     return json_list
