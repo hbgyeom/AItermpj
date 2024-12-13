@@ -157,7 +157,7 @@ def process_data(audio_data, text, threshold=5):
     og_intensity_values = og_intensity_values[
         length * start_og // temp:length * end_og // temp]
 
-    tts = gTTS(text=text, lang="en")
+    tts = gTTS(text=text, lang="ko")
     tts.save("audio.mp3")
 
     tts_voice = parselmouth.Sound("audio.mp3")
